@@ -7,7 +7,6 @@ public class Main {
         Count count = new Count(0);
         Adder adder = new Adder(count);
         Subtractor subtractor = new Subtractor(count);
-
         Thread t1 = new Thread(adder);
         Thread t2 = new Thread(subtractor);
         t1.start();
