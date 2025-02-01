@@ -17,8 +17,13 @@ public class Pair <K,L>{
         return second;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    //Static method.. this method can be called without object creation.. So need to add some syntatic suger
+    public static <A> void doSomething(A data){
+        System.out.println("doSomething");
+    }
+
+    //Non-static method.. so Data type will get defined at object creation
+    public void doSomethingElse(K data){
+        System.out.println("doSomethingElse");
     }
 }

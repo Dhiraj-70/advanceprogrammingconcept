@@ -37,5 +37,8 @@ public class Main {
         // every data type will be erased during runtime, every thing will be converted into
         // normal list, normal hashnap without data types.
 
+        Pair.doSomething("Hero");
+        Pair pair3 = new Pair();
+        pair3.doSomethingElse(3);
     }
 }
