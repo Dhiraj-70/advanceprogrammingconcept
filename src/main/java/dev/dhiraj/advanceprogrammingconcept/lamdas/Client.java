@@ -1,6 +1,8 @@
 package dev.dhiraj.advanceprogrammingconcept.lamdas;
 
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class Client {
     public static void main(String[] args) {
@@ -25,5 +27,13 @@ public class Client {
         };
         biConsumer.accept("Rupak", 99);
         biConsumer.accept("Chandan", 87);
+
+        //Lambda Expression
+        //3rd way in which we can provide the method body of an interface
+
+        Consumer<String> consumer = (str) -> {
+            System.out.println("Consumer Functional Interface-> "+str);
+        };
+        consumer.accept("Yes");
     }
 }
