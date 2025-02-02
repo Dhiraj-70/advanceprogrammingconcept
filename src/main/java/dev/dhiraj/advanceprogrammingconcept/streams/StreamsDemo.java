@@ -41,5 +41,9 @@ public class StreamsDemo {
         );
         List<Student> studentList1 = studentList.stream().filter((st1) -> st1.marks >= 880).toList();
         System.out.println(studentList1.stream().toList());
+
+        //Get the marks of all students from list
+        System.out.println(studentList.stream().map(( std)-> std.marks).toList());
+
     }
 }
