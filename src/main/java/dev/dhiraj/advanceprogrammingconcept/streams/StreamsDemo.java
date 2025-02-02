@@ -48,5 +48,7 @@ public class StreamsDemo {
         //get the count of all students from list
         System.out.println(studentList.stream().map((std) -> std.name).filter((word) -> word.length() >= 5).count()+ " Students are having name >= 5 length");
 
+        System.out.println(studentList.stream().map(st -> st.name.toUpperCase()).toList());
+
     }
 }
