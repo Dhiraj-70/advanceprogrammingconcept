@@ -1,5 +1,7 @@
 package dev.dhiraj.advanceprogrammingconcept.streams;
 
+import dev.dhiraj.advanceprogrammingconcept.comparator.Student;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,5 +29,17 @@ public class StreamsDemo {
         //Every element will be passed in the filter method.
         //lambda function will be applied over each element.
         //if lambda expression return true, only that elements will be added to the streams and converted back to list
+
+        List<Student> studentList = Arrays.asList(
+                new Student("Roshan", 22, 55),
+                new Student("Mohan", 1, 593),
+                new Student("Amit", 222, 33),
+                new Student("Sunil", 2421, 563),
+                new Student("Rohan", 21, 5344),
+                new Student("Guru", 12, 538),
+                new Student("Arun", 563, 880)
+        );
+        List<Student> studentList1 = studentList.stream().filter((st1) -> st1.marks >= 880).toList();
+        System.out.println(studentList1.stream().toList());
     }
 }
