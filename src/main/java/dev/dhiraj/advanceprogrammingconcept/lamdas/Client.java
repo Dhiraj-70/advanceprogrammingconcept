@@ -35,5 +35,10 @@ public class Client {
             System.out.println("Consumer Functional Interface-> "+str);
         };
         consumer.accept("Yes");
+
+        BiConsumer<String, Integer> biConsumer2 = (str1, num) -> {
+            System.out.println(str1 + ", " + num);
+        };
+        biConsumer2.accept("Rupak", 99);
     }
 }
