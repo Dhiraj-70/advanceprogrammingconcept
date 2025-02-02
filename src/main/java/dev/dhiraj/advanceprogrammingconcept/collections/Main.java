@@ -33,5 +33,27 @@ public class Main {
         for(String s : set){
             System.out.print(s+" ");
         }
+        System.out.println("Queue Interface");
+        //Queue
+        Car car1 = new Car("A", 5555, 120);
+        Car car2 = new Car("B", 10000, 60);
+        Car car3 = new Car("C", 555555, 340);
+        Car car4 = new Car("D", 52321, 690);
+        Car car5 = new Car("E", 55, 10);
+        Car car6 = new Car("F", 365, 2460);
+
+
+        Queue<Car> queue = new PriorityQueue<>();
+        queue.add(car1);
+        queue.add(car2);
+        queue.add(car3);
+        queue.add(car4);
+        queue.add(car5);
+        queue.add(car6);
+        while(!queue.isEmpty()){
+            System.out.println(queue.poll().toString());
+        }
     }
+
+
 }
