@@ -1,6 +1,7 @@
 package dev.dhiraj.advanceprogrammingconcept.lamdas;
 
 import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -40,5 +41,12 @@ public class Client {
             System.out.println(str1 + ", " + num);
         };
         biConsumer2.accept("Rupak", 99);
+
+        //BinaryOperator:- fun(T t1, T t2) return T
+        BinaryOperator<Integer> bo = (x, y) -> {
+            return x + y;
+        };
+        Integer sum = bo.apply(1, 2);
+        System.out.println("Sum using BinaryOperator Functional Interface: "+sum);
     }
 }
