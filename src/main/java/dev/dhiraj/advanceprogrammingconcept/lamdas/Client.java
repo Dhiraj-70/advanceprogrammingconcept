@@ -48,5 +48,12 @@ public class Client {
         };
         Integer sum = bo.apply(1, 2);
         System.out.println("Sum using BinaryOperator Functional Interface: "+sum);
+
+        //Predicate
+        Predicate<String> predicate = (str) -> {
+            if(str.length() > 5) return true;
+            return false;
+        };
+        System.out.println(predicate.test("Bangalore"));
     }
 }
