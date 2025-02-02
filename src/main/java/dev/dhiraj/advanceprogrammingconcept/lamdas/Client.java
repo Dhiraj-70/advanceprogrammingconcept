@@ -1,9 +1,6 @@
 package dev.dhiraj.advanceprogrammingconcept.lamdas;
 
-import java.util.function.BiConsumer;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class Client {
     public static void main(String[] args) {
@@ -60,6 +57,11 @@ public class Client {
         //Predicate
         Predicate<String> predicate1 = (str) -> str.length() > 5;
         System.out.println(predicate1.test("BAng"));
+
+
+        //BiPredicate
+        BiPredicate<String, Integer> bp = (str, num) -> str.length() > num;
+        System.out.println(bp.test("Bangalore", 4));
 
     }
 }
