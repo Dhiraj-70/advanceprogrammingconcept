@@ -55,5 +55,11 @@ public class Client {
             return false;
         };
         System.out.println(predicate.test("Bangalore"));
+
+        //Predicate on single line
+        //Predicate
+        Predicate<String> predicate1 = (str) -> str.length() > 5;
+        System.out.println(predicate1.test("BAng"));
+
     }
 }
