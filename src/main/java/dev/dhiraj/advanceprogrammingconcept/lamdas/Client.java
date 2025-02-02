@@ -1,5 +1,7 @@
 package dev.dhiraj.advanceprogrammingconcept.lamdas;
 
+import java.util.function.BiConsumer;
+
 public class Client {
     public static void main(String[] args) {
         //way 1
@@ -14,5 +16,14 @@ public class Client {
             }
         };
         sampleFunctionalInterface.fun1();
+
+        BiConsumer<String, Integer> biConsumer = new BiConsumer<String, Integer>() {
+            @Override
+            public void accept(String name, Integer num) {
+                System.out.println(name + " sorerd " + num+" marks");
+            }
+        };
+        biConsumer.accept("Rupak", 99);
+        biConsumer.accept("Chandan", 87);
     }
 }
